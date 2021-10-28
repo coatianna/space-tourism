@@ -1,0 +1,82 @@
+.home {
+    width: 142rem;
+    margin-left: 250px;
+    justify-content: space-between;
+    padding-top: 250px;
+    height: 80rem;
+}
+
+
+.homeImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.homeHeading {
+    font-size: $--s;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $tropical-blue;
+    letter-spacing: $l--sp;
+}
+
+
+.homeTitle {
+    font-size: $--xl;
+    text-transform: uppercase;
+    padding-top: 2.4rem;
+}
+
+
+.homeText {
+    font-size: 1.8rem;
+    color: $tropical-blue;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+    line-height: 32px;
+    padding-top: 2.4rem;
+    width: 42rem;
+}
+
+.homeText__Block {
+    width: 67rem;
+}
+
+
+.homeButton {
+    height: 240px;
+    width: 240px;
+    background-color: rgba(255, 255, 255, 0.07);
+    margin: auto;
+  
+    border-radius: 50%;
+    display: flex;
+    justify-items: center;
+    transition: all .8s;
+  
+    &:hover  {
+        width: 450px;
+        height: 450px;
+    }
+}
+  
+
+.buttonLink {
+    color: $vulcan;
+    background-color: $white;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: $--m;
+    color: $vulcan;
+    margin: auto;
+    padding-right: -300px;
+
+}
