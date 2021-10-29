@@ -72,9 +72,11 @@ ol {
     left: -19px;
     right: 0px;
     bottom: -38.2px;
-    border: 2px solid white;
+    background: #fff;
+    opacity: .5;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
-    opacity: 1;
+    height: .3rem;
+
     
   }
 }
@@ -87,5 +89,5 @@ ol {
         right: 0px;
         bottom: -38.2px;
         border: 2px solid white;
-}
+    } 
 }
