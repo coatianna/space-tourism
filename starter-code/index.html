@@ -29,6 +29,23 @@
         <li class="navList__Elem"><a class="nav__Link"href="#crew">Crew</a> </li>
         <li class="navList__Elem"><a class="nav__Link"href="#technology">Technology</a></li>
       </ol>
+
+      <div class="dropdown">
+      <button onclick="myFunction()" class="toggleButton">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    <div id="toggleList" class="dropdown-content">
+      <ul class="toggleUl">
+      <li class="toggleList"><a href="#" class="toggleElem">Home</a></li>
+      <li class="toggleList"><a href="#"  class="toggleElem">Destination</a></li>
+      <li class="toggleList"><a href="#"  class="toggleElem">Crew</a></li>
+      <li class="toggleList"> <a href="#"  class="toggleElem">Technology</a></li>
+    </ul>
+    </div>
+  </div>
     </nav>
 
    
@@ -48,11 +65,15 @@
     
     <figure class="home__fig">
       <picture>
-        <source media="(max-width:1181px)" class="homeImg | db | fill" srcset="assets/home/background-home-tablet.jpg">
+        <source media="(max-width:767px)" class="homeImg | db | fill" srcset="assets/home/background-home-mobile.jpg">
+        <source media="(max-width:1180px)" class="homeImg | db | fill" srcset="assets/home/background-home-tablet.jpg">
         <img class="homeImg | db | fill" src="assets/home/background-home-desktop.jpg" alt="#"/>
       </picture>
-     
     </figure>
+
+    <script src="app.js">
+  
+    </script>
     
   
 </body>

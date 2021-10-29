@@ -1,9 +1,14 @@
 nav {
     color:$white;
+    
 }
 
 .navImg {
     margin-left: 10rem;
+
+    @include maxw($bp-tabletL) {
+        margin-left: 3rem;
+    }
 }
 
 .navBar {
@@ -13,6 +18,10 @@ nav {
     padding-top: 40px;
     margin: auto;
 
+    @include maxw($bp-tabletL) { 
+        padding-top: 0;
+    }
+
     &::before{
         position:absolute;
         left:0;
@@ -20,13 +29,15 @@ nav {
         height: 1px;
         content: "";
         background: #E1E4EB;
-        width: 56.7rem;
+        width: 57.7rem;
         margin-left: 24.45rem;
         opacity: 0.4;
         z-index: 1;
 
-        @include maxw($bp-tablet) {
+        
+        @include maxw($bp-tabletL and $bp-small) {
             display: none;
+            padding-top: 0px;
         }
     }
 }
@@ -40,6 +51,10 @@ ol {
     counter-increment: section;      
     content: counters(section,".", decimal-leading-zero) " ";
     font-weight: 700;
+
+    @include maxw($bp-tabletL) {
+        display: none;
+    }
 }
 
 .navList {
@@ -49,13 +64,46 @@ ol {
     height: 96px;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
+
+
+    @include maxw($bp-tabletL) {
+        width: 65rem;
+    }
+
+    @include maxw($bp-tablet) {
+        width: 45rem;
+    }
+
+    @include maxw($bp-x-mobile) {
+        display: none;
+    }
+
 }
+
+.toggleButton {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    border: none;
+    background-color: unset;
+    top: 3.3rem;
+    z-index: 3;
+    left: 150px;
+}
+
 
 .navList__Elem {
     font-size: $--xs;
     letter-spacing: .1rem;
     text-transform: uppercase;
     margin-left: -12rem;
+
+    @include maxw($bp-tabletL) {
+        margin-left: 0;
+    }
 }
 
 .nav__Link {
@@ -77,7 +125,9 @@ ol {
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     height: .3rem;
 
-    
+    @include maxw($bp-tabletL) {
+       left: 0;
+    }
   }
 }
 
@@ -88,6 +138,86 @@ ol {
         left: -19px;
         right: 0px;
         bottom: -38.2px;
-        border: 2px solid white;
+        background: #fff;
+        height: .3rem;
+
+        @include maxw($bp-tabletL) {
+            left: 0;
+         }
     } 
 }
+
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+
+.dropbtn {
+    background-color: unset;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  
+  .dropdown {
+      display: none;
+
+      @include maxw($bp-mobile) {
+        position: relative;
+        display: inline-block;
+        margin: auto;
+      }
+  }
+  
+.toggleUl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(30px);
+    width:196px;
+    height: 73.7rem;
+    top: -23px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .toggleElem{
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+  }
+ 
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  }
+  
+ 
+  .dropdown-content a:hover {background-color: rgba(255,255,255, 0.2)}
+  
+  
+  .show {display:block;}

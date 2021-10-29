@@ -125,6 +125,12 @@ nav {
   margin-left: 10rem;
 }
 
+@media only screen and (max-width: 1180px) {
+  .navImg {
+    margin-left: 3rem;
+  }
+}
+
 .navBar {
   font-family: 'Barlow Condensed', sans-serif;
   -webkit-box-pack: justify;
@@ -137,6 +143,12 @@ nav {
   margin: auto;
 }
 
+@media only screen and (max-width: 1180px) {
+  .navBar {
+    padding-top: 0;
+  }
+}
+
 .navBar::before {
   position: absolute;
   left: 0;
@@ -144,15 +156,16 @@ nav {
   height: 1px;
   content: "";
   background: #E1E4EB;
-  width: 56.7rem;
+  width: 57.7rem;
   margin-left: 24.45rem;
   opacity: 0.4;
   z-index: 1;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1366px) {
   .navBar::before {
     display: none;
+    padding-top: 0px;
   }
 }
 
@@ -165,6 +178,12 @@ li::before {
   counter-increment: section;
   content: counters(section, ".", decimal-leading-zero) " ";
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1180px) {
+  li::before {
+    display: none;
+  }
 }
 
 .navList {
@@ -181,11 +200,56 @@ li::before {
           backdrop-filter: blur(20px);
 }
 
+@media only screen and (max-width: 1180px) {
+  .navList {
+    width: 65rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .navList {
+    width: 45rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .navList {
+    display: none;
+  }
+}
+
+.toggleButton {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  border: none;
+  background-color: unset;
+  top: 3.3rem;
+  z-index: 3;
+  left: 150px;
+}
+
 .navList__Elem {
   font-size: 1.6rem;
   letter-spacing: .1rem;
   text-transform: uppercase;
   margin-left: -12rem;
+}
+
+@media only screen and (max-width: 1180px) {
+  .navList__Elem {
+    margin-left: 0;
+  }
 }
 
 .nav__Link {
@@ -211,13 +275,107 @@ li::before {
   height: .3rem;
 }
 
+@media only screen and (max-width: 1180px) {
+  .nav__Link:hover::before {
+    left: 0;
+  }
+}
+
 .is--active:before {
   content: " ";
   position: absolute;
   left: -19px;
   right: 0px;
   bottom: -38.2px;
-  border: 2px solid white;
+  background: #fff;
+  height: .3rem;
+}
+
+@media only screen and (max-width: 1180px) {
+  .is--active:before {
+    left: 0;
+  }
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.dropbtn {
+  background-color: unset;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+  }
+}
+
+.toggleUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 12rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.04);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  width: 196px;
+  height: 73.7rem;
+  top: -23px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.toggleElem {
+  color: white;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.show {
+  display: block;
 }
 
 .view--home {
@@ -266,10 +424,17 @@ li::before {
   letter-spacing: .1rem;
 }
 
+@media only screen and (max-width: 1180px) {
+  .homeHeader__Strong {
+    letter-spacing: 3.38px;
+  }
+}
+
 .homeHeader__Title {
   font-size: 15rem;
   text-transform: uppercase;
   padding-top: 2.4rem;
+  font-family: 'Bellefair', serif;
 }
 
 .homeHeader__Text {
@@ -298,6 +463,8 @@ li::before {
   background: #fff;
   position: relative;
   margin-top: 10rem;
+  font-family: 'Bellefair', serif;
+  letter-spacing: .2rem;
 }
 
 .homeHeader__btn::before {
@@ -327,8 +494,17 @@ li::before {
 
 @media only screen and (max-width: 1180px) {
   .homeHeader__btn {
-    margin-bottom: 9rem;
-    margin-top: 15.6rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .homeHeader__btn {
+    margin-bottom: 5rem;
+    margin-top: 10.6rem;
+    width: 20.4rem;
+    height: 20.4rem;
   }
 }
 
@@ -336,5 +512,9 @@ li::before {
   z-index: -1;
   width: 100%;
   height: 100%;
+}
+
+.red {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */
