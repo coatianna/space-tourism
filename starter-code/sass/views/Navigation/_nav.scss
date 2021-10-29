@@ -23,22 +23,18 @@ nav {
     }
 
     &::before{
-        position:absolute;
-        left:0;
-        right:0;
+        // MQ
+        @include minw($bp-tabletL) {
+            content: '';
+        }
+        position: absolute;
+        left: 14%;
+        right: 88.8rem;
         height: 1px;
-        content: "";
+       
         background: #E1E4EB;
-        width: 57.7rem;
-        margin-left: 24.45rem;
         opacity: 0.4;
         z-index: 1;
-
-        
-        @include maxw($bp-tabletL and $bp-small) {
-            display: none;
-            padding-top: 0px;
-        }
     }
 }
 
