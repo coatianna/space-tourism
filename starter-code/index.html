@@ -11,27 +11,31 @@
 </head>
 
 <body>
-    <figure>
-        <img src="assets/home/background-home-desktop.jpg" alt="" class="homeImg">
-    </figure>
+
+    <picture>
+      <source srcset="assets/home/background-home-desktop.jpg"
+              media="(min-width: 769px)">
+      <img class="homeImg" src="assets/home/background-home-tablet.jpg" alt="" />
+  </picture>
+
     <nav class="navBar | row">
       <svg class="navImg" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
       <ol class="navList | row">
-        <li class="navList__elem"><a class="nav__link | is--active"href="#home">Home</a></li>
-        <li class="navList__elem"><a class="nav__link"href="#destination">Destination</a></li>
-        <li class="navList__elem"><a class="nav__link"href="#crew">Crew</a> </li>
-        <li class="navList__elem"><a class="nav__link"href="#technology">Technology</a></li>
+        <li class="navList__Elem"><a class="nav__Link | is--active"href="index.html">Home</a></li>
+        <li class="navList__Elem"><a class="nav__Link"href="#destination">Destination</a></li>
+        <li class="navList__Elem"><a class="nav__Link"href="#crew">Crew</a> </li>
+        <li class="navList__Elem"><a class="nav__Link"href="#technology">Technology</a></li>
       </ol>
     </nav>
 
    
-    <header class="home | row" id="home">
-      <div class="homeText__Block">
-        <h5 class="homeHeading">So, you want to travel to</h5>
-        <h1 class="homeTitle">Space</h1>
-        <p class="homeText">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+    <header class="homeHeader | row">
+      <div class="homeHeader__Block">
+        <strong class="homeHeader__Strong">So, you want to travel to</strong>
+        <h1 class="homeHeader__Title">Space</h1>
+        <p class="homeHeader__Text">Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
       </div>
-      <div class="homeButton">
+      <div class="homeHeader__Button">
         <a href="#" class="buttonLink">Explore</a>
       </div>
     </header>

@@ -14,9 +14,30 @@ $--xm: 5.6rem; //heading 3
 $--l: 10rem; // heading 2
 $--xl: 15rem; // heading 1
 
-$s--sp: 2.35px;
-$m--sp: 2.7px;
-$l--sp: 4.75px;
+
+$bp-fat:        2560px; // QHD
+
+$bp-xxx-wide:   2100px;
+$bp-xx-wide:    1920px; // Full HD
+$bp-x-wide:     1792px; // MBP 16”
+$bp-wide:       1680px; // MBP 15”
+
+$bp-medium:     1440px; // MBP 13”
+
+$bp-small:      1366px; // iPad Pro 12.9”
+$bp-x-small:    1280px; // Old MBP 13” / MBA 13”
+$bp-xx-small:   1200px;
+$bp-xxx-small:  1112px; // iPad Pro 10.5”
+
+$bp-tabletL:    1180px;
+$bp-tablet:     1023px;
+$bp-tabletP:     960px;
+
+$bp-mobile:      767px;
+$bp-x-mobile:    540px;
+$bp-xx-mobile:   360px;
+$bp-xxx-mobile:  350px;
+
 
 
 /*

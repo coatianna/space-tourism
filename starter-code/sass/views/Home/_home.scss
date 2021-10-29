@@ -1,9 +1,14 @@
-.home {
+.homeHeader {
     width: 142rem;
     margin-left: 250px;
     justify-content: space-between;
     padding-top: 250px;
     height: 80rem;
+
+    @include maxw($bp-tablet) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -15,23 +20,23 @@
 }
 
 
-.homeHeading {
+.homeHeader__Strong {
     font-size: $--s;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
     color: $tropical-blue;
-    letter-spacing: $l--sp;
+    letter-spacing: .1rem;
 }
 
 
-.homeTitle {
+.homeHeader__Title {
     font-size: $--xl;
     text-transform: uppercase;
     padding-top: 2.4rem;
 }
 
 
-.homeText {
+.homeHeader__Text {
     font-size: 1.8rem;
     color: $tropical-blue;
     font-family: 'Barlow Condensed', sans-serif;
@@ -41,14 +46,14 @@
     width: 42rem;
 }
 
-.homeText__Block {
+.homeHeader__Block{
     width: 67rem;
 }
 
 
-.homeButton {
-    height: 240px;
-    width: 240px;
+.homeHeader__Button {
+    height: 24rem;
+    width: 24rem;
     background-color: rgba(255, 255, 255, 0.07);
     margin: auto;
   
@@ -78,5 +83,6 @@
     color: $vulcan;
     margin: auto;
     padding-right: -300px;
+    
 
 }

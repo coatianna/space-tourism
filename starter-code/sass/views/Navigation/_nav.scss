@@ -24,6 +24,10 @@ nav {
         margin-left: 24.45rem;
         opacity: 0.4;
         z-index: 1;
+
+        @include maxw($bp-tablet) {
+            display: none;
+        }
     }
 }
 
@@ -47,14 +51,14 @@ ol {
     backdrop-filter: blur(20px);
 }
 
-.navList__elem {
+.navList__Elem {
     font-size: $--xs;
-    letter-spacing: $l--sp;
+    letter-spacing: .1rem;
     text-transform: uppercase;
     margin-left: -12rem;
 }
 
-.nav__link {
+.nav__Link {
     position: relative;
     text-decoration: none;
 
@@ -65,11 +69,10 @@ ol {
     &:hover::before {
     content: " ";
     position: absolute;
-    left: -31px;
+    left: -19px;
     right: 0px;
-    bottom: 0;
+    bottom: -38.2px;
     border: 2px solid white;
-    margin-bottom: -38.2px;
     transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 1;
     
@@ -80,10 +83,9 @@ ol {
     &:before {
         content: " ";
         position: absolute;
-        left: -31px;
+        left: -19px;
         right: 0px;
-        bottom: 0;
+        bottom: -38.2px;
         border: 2px solid white;
-        margin-bottom: -38.2px;
 }
 }
