@@ -36,6 +36,11 @@ nav {
         opacity: 0.4;
         z-index: 1;
     }
+
+    @include maxw($bp-x-mobile){
+    width: 36rem;
+    padding-top: 2.4rem;
+    }
 }
 
 ol {
@@ -43,7 +48,7 @@ ol {
     list-style-type: none;
   }
 
-  li::before {
+    .navList__Elem::before {
     counter-increment: section;      
     content: counters(section,".", decimal-leading-zero) " ";
     font-weight: 700;
@@ -85,9 +90,8 @@ ol {
     height: 21px;
     border: none;
     background-color: unset;
-    top: 3.3rem;
     z-index: 3;
-    left: 150px;
+    left: 84px;
 }
 
 
@@ -169,10 +173,10 @@ ol {
   }
   
   
-  .dropdown {
-      display: none;
+.dropdown {
+    display: none;
 
-      @include maxw($bp-mobile) {
+    @include maxw($bp-mobile) {
         position: relative;
         display: inline-block;
         margin: auto;
@@ -189,12 +193,14 @@ ol {
     position: absolute;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(30px);
-    width:196px;
-    height: 73.7rem;
-    top: -23px;
-    
+    inset: 0;
+    left: 12.1rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+
+    &:not(.is-open) {
+        pointer-events: none;
+    }
   }
   
   .toggleElem{
@@ -210,10 +216,14 @@ ol {
     text-decoration: none;
     display: block;
     width: 100%;
-  }
+}
   
  
   .dropdown-content a:hover {background-color: rgba(255,255,255, 0.2)}
   
   
   .show {display:block;}
+
+  .is-open {
+    display:block;
+  }

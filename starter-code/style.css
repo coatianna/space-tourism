@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Barlow:wght@100;400;500&display=swap");
 /* -------------- color --------------*/
 /*--------------- font-size / letter spacing  ----------*/
 /*
@@ -165,19 +165,26 @@ nav {
   }
 }
 
+@media only screen and (max-width: 540px) {
+  .navBar {
+    width: 36rem;
+    padding-top: 2.4rem;
+  }
+}
+
 ol {
   counter-reset: section;
   list-style-type: none;
 }
 
-li::before {
+.navList__Elem::before {
   counter-increment: section;
   content: counters(section, ".", decimal-leading-zero) " ";
   font-weight: 700;
 }
 
 @media only screen and (max-width: 1180px) {
-  li::before {
+  .navList__Elem::before {
     display: none;
   }
 }
@@ -230,9 +237,8 @@ li::before {
   height: 21px;
   border: none;
   background-color: unset;
-  top: 3.3rem;
   z-index: 3;
-  left: 150px;
+  left: 84px;
 }
 
 .navList__Elem {
@@ -343,12 +349,15 @@ li::before {
   background: rgba(255, 255, 255, 0.04);
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
-  width: 196px;
-  height: 73.7rem;
-  top: -23px;
+  inset: 0;
+  left: 12.1rem;
   -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+.dropdown-content:not(.is-open) {
+  pointer-events: none;
 }
 
 .toggleElem {
@@ -371,6 +380,10 @@ li::before {
 }
 
 .show {
+  display: block;
+}
+
+.is-open {
   display: block;
 }
 
@@ -412,6 +425,12 @@ li::before {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .homeHeader {
+    padding-top: 50px;
+  }
+}
+
 .homeHeader__Strong {
   font-size: 2.8rem;
   text-transform: uppercase;
@@ -426,6 +445,13 @@ li::before {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .homeHeader__Strong {
+    letter-spacing: 2.7px;
+    font-size: 1.6rem;
+  }
+}
+
 .homeHeader__Title {
   font-size: 15rem;
   text-transform: uppercase;
@@ -433,19 +459,40 @@ li::before {
   font-family: 'Bellefair', serif;
 }
 
+@media only screen and (max-width: 767px) {
+  .homeHeader__Title {
+    font-size: 8rem;
+  }
+}
+
 .homeHeader__Text {
   font-size: 1.8rem;
   color: #D0D6F9;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Barlow', sans-serif;
   letter-spacing: 1px;
   line-height: 32px;
   padding-top: 2.4rem;
-  width: 42rem;
+  width: 50.4rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .homeHeader__Text {
+    font-size: 1.5rem;
+    width: 33rem;
+    line-height: 25px;
+    letter-spacing: 0;
+  }
 }
 
 @media only screen and (max-width: 1180px) {
   .homeHeader__Block {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .homeHeader__Block {
+    width: 33rem;
   }
 }
 
@@ -491,16 +538,19 @@ li::before {
 @media only screen and (max-width: 1180px) {
   .homeHeader__btn {
     margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
+    width: 23.4rem;
+    height: 23.4rem;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .homeHeader__btn {
-    margin-bottom: 5rem;
-    margin-top: 10.6rem;
-    width: 20.4rem;
-    height: 20.4rem;
+    margin-bottom: 7rem;
+    margin-top: 4.6rem;
+    width: 15rem;
+    height: 15rem;
+    font-size: 2rem;
   }
 }
 
@@ -512,5 +562,166 @@ li::before {
 
 .red {
   background-color: red;
+}
+
+.destination--view {
+  height: 100vh;
+  width: 100vw;
+}
+
+.destinationImg {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.destination {
+  width: 80%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 7.6rem;
+  padding-bottom: 0;
+}
+
+.destinationLeft__Title {
+  font-size: 2.8rem;
+  letter-spacing: 4.72px;
+  line-height: 1;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 9.7rem;
+  margin-left: 6.5rem;
+}
+
+.destinationRight__Block {
+  width: 45rem;
+  margin-top: 9.7rem;
+}
+
+.destinationTitle {
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+}
+
+.destinationText {
+  font-size: 1.8rem;
+  font-family: 'Barlow', sans-serif;
+  color: #D0D6F9;
+  line-height: 32px;
+  padding-top: 2rem;
+}
+
+.destinationText::before {
+  position: absolute;
+  left: 57%;
+  right: 13%;
+  height: 1px;
+  background: #E1E4EB;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1181px) {
+  .destinationText::before {
+    content: '';
+    margin-top: 17.8rem;
+  }
+}
+
+.destinationSlider {
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Barlow', sans-serif;
+  width: 34rem;
+  padding-bottom: 4rem;
+  font-weight: 100;
+  height: 3.4rem;
+}
+
+.sliderElem {
+  position: relative;
+  text-decoration: none;
+}
+
+.sliderElem:before {
+  -webkit-transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sliderElem:hover::before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -1.2rem;
+  background: #fff;
+  opacity: 0.5;
+  -webkit-transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: .3rem;
+}
+
+.destinationList {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 32rem;
+}
+
+.destinationList__Text {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 2.36px;
+  font-family: 'Barlow', sans-serif;
+  color: #D0D6F9;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  font-weight: 100;
+}
+
+.destinationList__Span {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: 'Bellefair', serif;
+}
+
+.destinationBlock {
+  margin-top: 8.3rem;
+}
+
+.planetImg {
+  padding-left: 14rem;
+  margin-right: 8.7rem;
+}
+
+.accent {
+  letter-spacing: 4.72px;
+  opacity: 0.3;
+  font-weight: 500;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.active--planet:before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -1.2rem;
+  background: #fff;
+  height: .3rem;
+}
+
+@media only screen and (max-width: 1180px) {
+  .active--planet:before {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

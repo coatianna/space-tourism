@@ -5,33 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" />
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="destination--view">
+  
+  <div class="dropdown-content">
+    <ul class="toggleUl">
+      <li class="toggleList"><a href="#" class="toggleElem">Home</a></li>
+      <li class="toggleList"><a href="#"  class="toggleElem">Destination</a></li>
+      <li class="toggleList"><a href="#"  class="toggleElem">Crew</a></li>
+      <li class="toggleList"> <a href="#"  class="toggleElem">Technology</a></li>
+    </ul>
+  </div>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <nav class="navBar | row">
+      <svg class="navImg" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+      <ol class="navList | row">
+        <li class="navList__Elem"><a class="nav__Link "href="index.html">Home</a></li>
+        <li class="navList__Elem"><a class="nav__Link | is--active"href="#destination">Destination</a></li>
+        <li class="navList__Elem"><a class="nav__Link"href="#crew">Crew</a> </li>
+        <li class="navList__Elem"><a class="nav__Link"href="#technology">Technology</a></li>
+      </ol>
 
-  01 Pick your destination
+      <div class="dropdown">
+        <button class="toggleButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
 
-  Moon
-  Mars
-  Europa
-  Titan
 
-  Moon
+    <section class="destination | row">
+      <div class="destinationLeft__Block">
+        <p class="destinationLeft__Title"><span class="accent">01 </span> Pick your destination</p>
+        <figure class="destinationPlanet__Fig">
+            <img src="assets/destination/image-moon.webp" alt=" " class="planetImg">
+        </figure>
+      </div>
 
-  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-  regain perspective and come back refreshed. While you’re there, take in some history 
-  by visiting the Luna 2 and Apollo 11 landing sites.
+      <div class="destinationRight__Block">
+        <ul class="destinationSlider | row">
+          <li class="destinatonSlider__List"><a href="#" class="sliderElem | active--planet">Moon</a></li>
+          <li class="destinatonSlider__List"><a href="#" class="sliderElem">Mars</a></li>
+          <li class="destinatonSlider__List"><a href="#" class="sliderElem">Europa</a></li>
+          <li class="destinatonSlider__List"><a href="#" class="sliderElem">Titan</a></li>
+        </ul>
+        <h2 class="destinationTitle">Moon</h2>
+        <p class="destinationText">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+        <div class="destinationBlock">
+          <ul class="destinationList | row">
+            <li class="destinationList__ELem">
+              <p class="destinationList__Text">Avg. distance</p>
+              <span class="destinationList__Span">384,400km</span>  
+            </li>
+            <li class="destinationList__ELem">
+              <p class="destinationList__Text">Est. travel time</p>
+              <span class="destinationList__Span">3 days</span>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  Avg. distance
-  384,400 km
-
-  Est. travel time
-  3 days
+      <figure class="destination__Fig">
+        <picture>
+          <source media="(max-width:767px)" class="destinationImg | db | fill" srcset="assets/destination/background-destination-mobile.jpg">
+          <source media="(max-width:1180px)" class="destinationImg | db | fill" srcset="assets/destination/background-destination-tablet.jpg">
+          <img class="destinationImg | db | fill" src="assets/destination/background-destination-desktop.jpg" alt="#"/>
+        </picture>
+      </figure>
+    </section>
+ 
 </body>
 </html>
