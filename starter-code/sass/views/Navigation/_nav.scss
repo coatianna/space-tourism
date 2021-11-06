@@ -176,7 +176,7 @@ ol {
 .dropdown {
     display: none;
 
-    @include maxw($bp-mobile) {
+    @include maxw($bp-x-mobile) {
         position: relative;
         display: inline-block;
         margin: auto;
@@ -189,7 +189,7 @@ ol {
     margin-top: 12rem;
 }
   .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(30px);
@@ -197,9 +197,13 @@ ol {
     left: 12.1rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: opacity .4s;
+    opacity: 1;
 
     &:not(.is-open) {
         pointer-events: none;
+        display: none;
+        opacity: 0;
     }
   }
   
