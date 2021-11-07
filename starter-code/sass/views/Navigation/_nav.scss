@@ -8,6 +8,8 @@ nav {
 
     @include maxw($bp-tabletL) {
         margin-left: 3rem;
+        width: 4rem;
+        height: 4rem;
     }
 }
 
@@ -38,7 +40,7 @@ nav {
     }
 
     @include maxw($bp-x-mobile){
-    width: 36rem;
+    width: 47rem;
     padding-top: 2.4rem;
     }
 }
@@ -82,7 +84,7 @@ ol {
 }
 
 .toggleButton {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,6 +94,12 @@ ol {
     background-color: unset;
     z-index: 3;
     left: 84px;
+    cursor: pointer;
+    padding: 0;
+
+    @include maxw($bp-mobile) {
+        margin-left: 12rem;
+    }
 }
 
 
@@ -150,9 +158,8 @@ ol {
 
 .bar {
     height: 3px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 10px;
+    width: 2.4rem;
+    background-color: $tropical-blue;
 }
 
 
@@ -199,6 +206,7 @@ ol {
     z-index: 1;
     transition: opacity .4s;
     opacity: 1;
+    font-family: 'Barlow', sans-serif;
 
     &:not(.is-open) {
         pointer-events: none;

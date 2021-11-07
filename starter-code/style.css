@@ -128,6 +128,8 @@ nav {
 @media only screen and (max-width: 1180px) {
   .navImg {
     margin-left: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -167,7 +169,7 @@ nav {
 
 @media only screen and (max-width: 540px) {
   .navBar {
-    width: 36rem;
+    width: 47rem;
     padding-top: 2.4rem;
   }
 }
@@ -222,7 +224,7 @@ ol {
 }
 
 .toggleButton {
-  position: absolute;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +241,14 @@ ol {
   background-color: unset;
   z-index: 3;
   left: 84px;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .toggleButton {
+    margin-left: 12rem;
+  }
 }
 
 .navList__Elem {
@@ -301,9 +311,8 @@ ol {
 
 .bar {
   height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
+  width: 2.4rem;
+  background-color: #D0D6F9;
 }
 
 .dropbtn {
@@ -357,6 +366,7 @@ ol {
   -webkit-transition: opacity .4s;
   transition: opacity .4s;
   opacity: 1;
+  font-family: 'Barlow', sans-serif;
 }
 
 .dropdown-content:not(.is-open) {
@@ -711,7 +721,7 @@ ol {
   height: 1px;
   background: #E1E4EB;
   opacity: 0.3;
-  z-index: 1;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 1180px) {

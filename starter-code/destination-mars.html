@@ -5,33 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" />
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="destination--view">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <div class="dropdown-content">
+    <ul class="toggleUl">
+      <li class="toggleList"><a href="index.html" class="toggleElem">Home</a></li>
+      <li class="toggleList"><a href="destination-moon.html"  class="toggleElem">Destination</a></li>
+      <li class="toggleList"><a href="crew-commander.html"  class="toggleElem">Crew</a></li>
+      <li class="toggleList"> <a href="technology-vehicle.html"  class="toggleElem">Technology</a></li>
+    </ul>
+  </div>
 
-  01 Pick your destination
+    <nav class="navBar | row">
+      <svg viewBox="0 0 48 48" class="navImg" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+      <ol class="navList | row">
+          <li class="navList__Elem"><a class="nav__Link "href="index.html">Home</a></li>
+          <li class="navList__Elem"><a class="nav__Link | is--active" href="destination-moon.html">Destination</a></li>
+          <li class="navList__Elem"><a class="nav__Link" href="crew-commander.html">Crew</a> </li>
+          <li class="navList__Elem"><a class="nav__Link" href="technology-vehicle.html">Technology</a></li>
+      </ol>
 
-  Moon
-  Mars
-  Europa
-  Titan
 
-  Mars
+      <div class="dropdown">
+        <button class="toggleButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
 
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
 
-  Avg. distance
-  225 mil. km
+    <section class="destination | row">
+      <div class="destinationLeft__Block">
+        <p class="destinationLeft__Title"><span class="accent">01 </span> Pick your destination</p>
+        <figure class="destinationPlanet__Fig">
+            <img src="assets/destination/image-mars.webp" alt=" " class="planetImg">
+        </figure>
+      </div>
 
-  Est. travel time
-  9 months
+      <div class="destinationRight__Block">
+        <ul class="destinationSlider | row">
+          <li class="destinatonSlider__List"><a href="destination-moon.html" class="sliderElem">Moon</a></li>
+          <li class="destinatonSlider__List"><a href="destination-mars.html" class="sliderElem | active--planet">Mars</a></li>
+          <li class="destinatonSlider__List"><a href="destination-europa.html" class="sliderElem">Europa</a></li>
+          <li class="destinatonSlider__List"><a href="destination-titan.html" class="sliderElem">Titan</a></li>
+        </ul>
+        <h2 class="destinationTitle">Mars</h2>
+        <p class="destinationText">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+        <div class="destinationBlock">
+          <ul class="destinationList | row">
+            <li class="destinationList__ELem">
+              <p class="destinationList__Text">Avg. distance</p>
+              <span class="destinationList__Span">225 MIL. km</span>  
+            </li>
+            <li class="destinationList__ELem">
+              <p class="destinationList__Text">Est. travel time</p>
+              <span class="destinationList__Span">9 months</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <figure class="destination__Fig">
+        <picture>
+          <source media="(max-width:767px)" class="destinationImg | db | fill" srcset="assets/destination/background-destination-mobile.jpg">
+          <source media="(max-width:1180px)" class="destinationImg | db | fill" srcset="assets/destination/background-destination-tablet.jpg">
+          <img class="destinationImg | db | fill" src="assets/destination/background-destination-desktop.jpg" alt="#"/>
+        </picture>
+      </figure>
+    </section>
+ 
+    <script src="app.js">
+    </script>
 </body>
 </html>
