@@ -40,7 +40,7 @@ nav {
     }
 
     @include maxw($bp-x-mobile){
-    width: 47rem;
+    width: 100%;
     padding-top: 2.4rem;
     }
 }
@@ -88,12 +88,12 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+
     height: 21px;
     border: none;
     background-color: unset;
     z-index: 3;
-    left: 84px;
+    left: 5rem;
     cursor: pointer;
     padding: 0;
 

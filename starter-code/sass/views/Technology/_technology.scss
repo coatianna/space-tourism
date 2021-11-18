@@ -1,0 +1,211 @@
+.technology--view {
+    height: 100vh;
+    width: 100vw;
+
+    @include maxw($bp-tabletL) {
+        width: 100%;
+    }
+}
+
+.technology {
+    width: 80%;
+    margin: auto;
+    padding-top: 7.6rem;
+    justify-content: space-around;
+
+    @include maxw($bp-tabletL) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0;
+        padding-top: 4rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.tecnnologyLeft__Block {
+
+    @include maxw($bp-tabletL) {
+       text-align: center;
+    }
+}
+.technologySlider__Block {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5rem;
+
+    @include maxw($bp-tabletL) {
+        flex-direction: column;
+        margin-top: 32rem;
+    }
+
+    @include maxw($bp-mobile) {
+        margin-top: 16rem;
+
+    }
+}
+
+.technologyBlock__Text {
+    display: flex;
+    flex-direction: column;
+}
+
+.technologyTop__Title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 4.72px;
+    line-height: 1;
+    margin-bottom: 9.7rem;
+
+    @include maxw($bp-tabletL) {
+        font-size: 2rem;
+        letter-spacing: 3.38px;
+    }
+
+    @include maxw($bp-mobile) {
+        font-size: 1.6rem;
+        margin-right: 0;
+        letter-spacing: 2.7px;
+    }
+}
+
+.technologySlider {
+    width: 13.2rem;
+
+    @include maxw($bp-tabletL) {
+        display: flex;
+        flex-direction: row;
+        width: 21rem;
+        justify-content: space-between;
+        margin: auto;
+        padding-bottom: 4rem;
+    }
+
+    @include maxw($bp-mobile) {
+        width: 15.2rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.technologyList {
+    width: 8rem;
+    height: 8rem;
+    padding-top: 2.2rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: solid;
+    border-width: thin;
+    text-align: center;
+
+    &:hover {
+        background-color: white;
+        opacity: 1;
+        transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+        color: black;
+    }
+
+    @include maxw($bp-tabletL) {
+        width: 6rem;
+        height: 6rem;
+        padding-top: 1.8rem;
+    }
+
+    @include maxw($bp-mobile) {
+        width: 4rem;
+        height: 4rem;
+        padding-top: 1.3rem;
+    }
+}
+
+.techologyLink {
+    font-size: 3.6rem;
+
+    @include maxw($bp-tabletL) {
+        font-size: 2.4rem;
+    }
+
+    @include maxw($bp-mobile) {
+        font-size: 1.6rem;
+    }
+
+    &:hover {
+        transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+        color: black;
+    }
+
+}
+
+.technologyBLock__Title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+}
+
+.technologyLeft__Name {
+    font-size: 5.6rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+
+    @include maxw($bp-tabletL) {
+        font-size: 4rem;
+    }
+
+    
+    @include maxw($bp-mobile) {
+        font-size: 2.4rem;
+    }
+}
+
+.technologyLeft__Text {
+    font-size: 1.8rem;
+    font-family: 'Barlow', sans-serif;
+    color: $tropical-blue;
+    line-height: 32px;
+    padding-top: 2rem;
+    font-weight: 100;
+    padding-top: 2.7rem;
+    width: 44.4rem;
+
+    @include maxw($bp-tabletL) {
+        line-height: 28px;
+        width: 45.8rem;
+        font-size: 1.6rem;
+        padding-top: 1.6rem;
+    }
+
+    @include maxw($bp-mobile) {
+        font-size: 1.5rem;
+        width: 32.7rem;
+        line-height: 2.5rem;
+        color: $white;
+    }
+}
+
+.technologyFig {
+    margin-top: 9.3rem;
+
+    @include maxw($bp-tabletL) {
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        top: 20%;
+    }
+}
+
+.technology__Img {
+
+    @include maxw($bp-mobile){
+        width: 37.5rem;
+    }
+}
+
+.tech--active {
+    background-color: white;
+}
+
+.tech-active {
+    color: black;
+}

@@ -67,7 +67,8 @@
     line-height: 32px;
     padding-top: 2.4rem;
     width: 50.4rem;
-
+    font-weight: 100;
+    
     @include maxw($bp-mobile) {
         font-size: 1.5rem;
         width: 33rem;

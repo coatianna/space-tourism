@@ -5,28 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" />
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="technology--view">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <div class="dropdown-content">
+    <ul class="toggleUl">
+      <li class="toggleList"><a href="index.html" class="toggleElem">Home</a></li>
+      <li class="toggleList"><a href="destination-moon.html"  class="toggleElem">Destination</a></li>
+      <li class="toggleList"><a href="crew-commander.html"  class="toggleElem">Crew</a></li>
+      <li class="toggleList"> <a href="technology-vehicle.html"  class="toggleElem">Technology</a></li>
+    </ul>
+  </div>
 
-  03 Space launch 101
+    <nav class="navBar | row">
+      <svg viewBox="0 0 48 48" class="navImg" xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+      <ol class="navList | row">
+        <li class="navList__Elem"><a class="nav__Link  "href="index.html">Home</a></li>
+        <li class="navList__Elem"><a class="nav__Link " href="destination-moon.html">Destination</a></li>
+        <li class="navList__Elem"><a class="nav__Link" href="crew-commander.html">Crew</a> </li>
+        <li class="navList__Elem"><a class="nav__Link | is--active" href="technology-vehicle.html">Technology</a></li>
+      </ol>
 
-  1
-  2
-  3
+      <div class="dropdown">
+        <button class="toggleButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
 
-  The terminology...
-  Launch vehicle
+    <header class="technology | row">
+      <div class="tecnnologyLeft__Block">
+        <p class="technologyTop__Title"><span class="accent">03 </span> Space launch 101 </p>
+        <div class="technologySlider__Block">
+          <ul class="technologySlider">
+            <li class="technologyList | tech--active"><a href="technology-vehicle.html" class="techologyLink | tech-active">1</a></li>
+            <li class="technologyList"><a href="technology-spaceport.html" class="techologyLink">2</a></li>
+            <li class="technologyList"><a href="technology-capsule.html" class="techologyLink">3</a></li>
+          </ul>
+          <div class="technologyBlock__Text">
+            <p class="technologyBLock__Title">The terminology...</p>
+            <h1 class="technologyLeft__Name">Launch Vehicle</h1>
+            <p class="technologyLeft__Text">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+          </div>
+        </div>
+      </div>
 
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+      <figure class="technologyFig">
+        <picture>
+            <source class="technologyRight__Img"media="(max-width:1180px)" srcset="assets\technology\image-launch-vehicle-landscape.jpg">
+            <img src="assets\technology\image-launch-vehicle-portrait.jpg" alt=" " class="technology__Img">
+        </picture>
+      </figure>
+
+    </header>
+    <figure class="crew__Fig">
+      <picture>
+        <source media="(max-width:767px)" class="crewImg | db | fill" srcset="assets\technology\background-technology-mobile.jpg">
+        <source media="(max-width:1180px)" class="crewImg | db | fill" srcset="assets\technology\background-technology-tablet.jpg">
+        <img class="crewImg | db | fill" src="assets\technology\background-technology-desktop.jpg" alt="#"/>
+      </picture>
+    </figure>
+  </section>
+  <script src="app.js">
+  </script>
 </body>
 </html>
